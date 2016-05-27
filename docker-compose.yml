@@ -1,9 +1,6 @@
 web:
-  build: .
+  image: pauloborges/averell
   command: npm run start
-  env_file: postgres.env
-  volumes:
-    - .:/usr/src/app
   ports:
     - 8000:8000
   links:
