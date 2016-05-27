@@ -1,0 +1,26 @@
+{
+  "name": "harbormaster-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "LOG_LEVEL=debug nodemon index.js | bunyan",
+    "start": "LOG_LEVEL=info node index.js | bunyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh+git://git@github.com:pauloborges/averell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bunyan": "^1.7.0",
+    "co": "^4.6.0",
+    "express": "^4.13.4",
+    "http-graceful-shutdown": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.0"
+  }
+}
