@@ -1,26 +1,4 @@
-web1:
-  image: pauloborges/averell
-  command: npm run start
-  links:
-    - mongo
-web2:
-  image: pauloborges/averell
-  command: npm run start
-  links:
-    - mongo
-web3:
-  image: pauloborges/averell
-  command: npm run start
-  links:
-    - mongo
-web4:
-  image: pauloborges/averell
-  command: npm run start
-  links:
-    - mongo
-mongo:
-  image: mongo
-lb:
+nginx:
   image: nginx
   ports: 
     - 443:443
@@ -29,7 +7,11 @@ lb:
     - /etc/letsencrypt/archive/averell.madeatfareoffice.com:/etc/nginx/tls
     - /app/nginx.conf:/etc/nginx/nginx.conf
   links: 
-    - web1
-    - web2
-    - web3
-    - web4
+    - web
+web:
+  image: pauloborges/averell
+  command: npm run start
+  links:
+    - mongo
+mongo:
+  image: mongo
