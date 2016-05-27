@@ -11,5 +11,5 @@ lb:
   image: nginx
   volumes:
     - /etc/letsencrypt/archive/averell.madeatfareoffice.com:/etc/nginx/tls
-    - /app/ngnix.conf:/etc/nginx/nginx.conf
+    - /app/nginx.conf:/etc/nginx/nginx.conf
 
