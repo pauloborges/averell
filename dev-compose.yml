@@ -1,6 +1,6 @@
 web:
   build: .
-  command: npm run start
+  command: npm run dev
   volumes:
     - .:/usr/src/app
   ports:

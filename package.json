@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "docker-compose -f dev-compose.yml up",
+    "dev": "LOG_LEVEL=debug nodemon index.js | bunyan",
     "start": "LOG_LEVEL=info node index.js | bunyan"
   },
   "repository": {
