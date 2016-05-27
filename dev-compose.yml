@@ -1,0 +1,11 @@
+web:
+  build: .
+  command: npm run start
+  volumes:
+    - .:/usr/src/app
+  ports:
+    - 8000:8000
+  links:
+    - mongo
+mongo:
+  image: mongo
