@@ -1,29 +1,21 @@
 web1:
   image: pauloborges/averell
   command: npm run start
-  ports:
-    - 8000:8000
   links:
     - mongo
 web2:
   image: pauloborges/averell
   command: npm run start
-  ports:
-    - 8000:8000
   links:
     - mongo
 web3:
   image: pauloborges/averell
   command: npm run start
-  ports:
-    - 8000:8000
   links:
     - mongo
 web4:
   image: pauloborges/averell
   command: npm run start
-  ports:
-    - 8000:8000
   links:
     - mongo
 mongo:
